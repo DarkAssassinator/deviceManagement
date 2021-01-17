@@ -1,0 +1,32 @@
+# 开发环境
+server:
+  # 服务器的HTTP端口，默认为80
+  port: 8080
+  servlet:
+    # 应用的访问路径
+    context-path: /
+  tomcat:
+    # tomcat的URI编码
+    uri-encoding: UTF-8
+    # tomcat最大线程数，默认为200
+    # Tomcat启动初始化的线程数，默认值25
+    threads:
+      min-spare: 30
+      max: 800
+
+# Spring配置
+spring:
+  # 模板引擎
+  thymeleaf:
+    mode: HTML
+    encoding: utf-8
+    # 禁用缓存
+    cache: false
+  profiles:
+    active: druid
+
+# 日志配置
+logging:
+  level:
+    com.yann.device: debug
+    org.springframework: warn
